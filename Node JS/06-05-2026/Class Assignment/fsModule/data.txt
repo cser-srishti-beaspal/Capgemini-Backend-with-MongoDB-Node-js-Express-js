@@ -1,0 +1,23 @@
+I. INTRODUCTION
+
+Artificial Intelligence has significantly reshaped software engineering by introducing automation throughout the development lifecycle, from code generation to testing and debugging [1]. Large language models trained on massive datasets can generate, review, and optimize code using natural-language prompts, enabling developers to accelerate development and reduce repetitive tasks [5]. These tools have lowered barriers to entry, making programming more accessible to beginners while improving productivity for experienced engineers.
+
+Despite these advantages, the growing reliance on AI-generated code raises important concerns regarding software security, correctness, and ethical responsibility. Unlike traditional programming tools, LLMs generate code through probabilistic pattern recognition rather than true semantic understanding of software systems [1]. Consequently, generated code may appear syntactically correct while containing hidden logical errors, security vulnerabilities, or outdated implementation practices [2].
+
+
+VII. CONCLUSION
+
+The rapid advancement of Artificial Intelligence and large language models has introduced a transformative shift in modern software engineering. AI-powered programming assistants such as GitHub Copilot, OpenAI Codex, and ChatGPT have demonstrated remarkable potential to accelerate development, reduce repetitive work, and make programming more accessible to a broader audience [5]. These tools enable developers to quickly prototype applications, generate documentation, and explore alternative solutions, thereby significantly improving productivity and innovation.
+
+Despite these advantages, this study highlights that the adoption of AI-generated code introduces substantial challenges related to security, accuracy, transparency, and legal accountability. Experimental analysis and supporting literature reveal that AI-generated code frequently contains vulnerabilities, outdated dependencies, and logical inconsistencies that may not be immediately visible during development [2][3]. Such risks arise primarily from the nature of large language models, which rely on statistical pattern prediction rather than a deep semantic understanding of software systems [1]. As a result, generated code may appear syntactically correct while still containing hidden flaws that can compromise system reliability and security.
+
+Another key finding of this research is the growing importance of human oversight in AI-assisted development. The concept of human-in-the-loop programming remains essential to ensure that machine-generated outputs are reviewed, tested, and validated before deployment [13]. Without proper supervision, organizations risk introducing vulnerabilities such as weak authentication mechanisms, insecure cryptographic implementations, and exposure to common web attacks [7]. Therefore, AI tools should be viewed as collaborative assistants rather than replacements for professional software engineers.
+
+Legal and ethical considerations also represent a critical area of concern. Because AI models are trained on large public repositories, questions surrounding code ownership, licensing compliance, and intellectual property remain unresolved [4]. Establishing clear governance frameworks and industry standards will be necessary to support the responsible integration of AI in software development workflows.
+
+Looking forward, the future of AI-assisted programming depends on the development of more secure, transparent, and trustworthy systems. Security-aware training datasets, real-time vulnerability detection, and explainable AI techniques can significantly improve confidence in generated outputs [6][13]. Additionally, domain-specific models tailored for sensitive industries such as healthcare and finance may help reduce risk by improving contextual understanding and regulatory compliance.
+
+The responsible integration of AI into software engineering will ultimately determine whether these technologies become a source of risk or a foundation for the next generation of secure and reliable software systems.
+
+
+
