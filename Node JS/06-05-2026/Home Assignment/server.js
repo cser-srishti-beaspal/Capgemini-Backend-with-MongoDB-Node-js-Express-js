@@ -1,7 +1,7 @@
 const http = require("http");
 const { MongoClient, ObjectId } = require("mongodb");
 
-// MongoDB Connection URL
+// MongoDB Connection 
 const url = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(url);
 
@@ -29,20 +29,20 @@ const server = http.createServer(async (req, res) => {
 
     res.setHeader("Content-Type", "application/json");
 
-    // GET → Fetch all students
+    // GET 
     if (req.method === "GET" && req.url === "/students") {
         const data = await collection.find().toArray();
         res.end(JSON.stringify(data));
     }
 
-    // POST → Insert student
+    // POST 
     else if (req.method === "POST" && req.url === "/students") {
         const body = await getRequestData(req);
         const result = await collection.insertOne(body);
         res.end(JSON.stringify({ message: "Student Added", result }));
     }
 
-    // PUT → Update full document
+    // PUT 
     else if (req.method === "PUT" && req.url.startsWith("/students/")) {
         const id = req.url.split("/")[2];
         const body = await getRequestData(req);
@@ -55,7 +55,7 @@ const server = http.createServer(async (req, res) => {
         res.end(JSON.stringify({ message: "Student Replaced", result }));
     }
 
-    // PATCH → Update partial fields
+    // PATCH 
     else if (req.method === "PATCH" && req.url.startsWith("/students/")) {
         const id = req.url.split("/")[2];
         const body = await getRequestData(req);
@@ -68,7 +68,7 @@ const server = http.createServer(async (req, res) => {
         res.end(JSON.stringify({ message: "Student Updated", result }));
     }
 
-    // DELETE → Remove student
+    // DELETE 
     else if (req.method === "DELETE" && req.url.startsWith("/students/")) {
         const id = req.url.split("/")[2];
 
