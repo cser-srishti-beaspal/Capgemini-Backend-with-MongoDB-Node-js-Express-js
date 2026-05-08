@@ -137,6 +137,38 @@ app.delete("/users", async (req, res) => {
 
 });
 
+app.get("/displayUsers", async (req, res) => {
+  let users = await db.collection("users").find().toArray();
+
+  let output = `
+    <html>
+      <head>
+        <title>Users</title>
+      </head>
+      <body>
+        <h1>All Users</h1>
+  `;
+
+  users.forEach((user) => {
+    output += `
+      <div>
+        <h2>${user.name}</h2>
+        <p>Email: ${user.email}</p>
+        <p>Phone: ${user.phone}</p>
+        <p>City: ${user.city}</p>
+        <hr>
+      </div>
+    `;
+  });
+
+  output += `
+      </body>
+    </html>
+  `;
+
+  res.send(output);
+});
+
 app.get("/allusers", async (req, res) => {
 
   let users = await db.collection("users").find().toArray();
