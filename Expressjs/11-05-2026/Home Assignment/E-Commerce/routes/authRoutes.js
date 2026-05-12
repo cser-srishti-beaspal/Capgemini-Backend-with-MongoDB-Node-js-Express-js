@@ -6,6 +6,9 @@ router.post("/register",register);
 router.post("/verify-otp",verifyOtp);
 router.post("/login",login);
 router.post("/refresh-token",refreshToken);
+
+
+
 router.get("/profile",protect,(req,res)=>{
     res.status(200).json({
         message:"profile fetch successfully",

@@ -7,5 +7,5 @@ const productRouter = require("./routes/productRoutes");
 app.use(cors());
 app.use(express.json());
 app.use('/api/auth', router)
-app.use("/api", productRouter)
+app.use("/api/products", require("./routes/productRoutes"));
 module.exports = app;
